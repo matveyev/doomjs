@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DOOM.js — vector raycaster</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #050507; overflow: hidden; }
+  #wrap { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+  #wrap::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%);
+  }
+  canvas#game {
+    width: min(100vw, 160vh); aspect-ratio: 8 / 5;
+    image-rendering: pixelated; image-rendering: crisp-edges;
+    background: #000; cursor: crosshair; outline: none;
+  }
+  #fx {
+    position: fixed; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,.14) 0 1px, transparent 1px 3px);
+  }
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game" width="640" height="400"></canvas></div>
+<div id="fx"></div>
+<noscript><p style="color:#c33;font-family:monospace;padding:2em">JavaScript required.</p></noscript>
+<script src="js/util.js?v=4"></script>
+<script src="js/textures.js?v=4"></script>
+<script src="js/sprites.js?v=4"></script>
+<script src="js/audio.js?v=4"></script>
+<script src="js/level.js?v=4"></script>
+<script src="js/effects.js?v=4"></script>
+<script src="js/entities.js?v=4"></script>
+<script src="js/weapon.js?v=4"></script>
+<script src="js/render.js?v=4"></script>
+<script src="js/hud.js?v=4"></script>
+<script src="js/main.js?v=4"></script>
+</body>
+</html>
